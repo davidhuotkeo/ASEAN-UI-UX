@@ -1,0 +1,206 @@
+$light-green: #C8E690
+$green: #3E7452
+$blue-green: #062E30
+$dark-green: #0F1E25
+$gray: #DDDDDD
+$bg: #F7F8F8
+$dark-gray: #373737
+$small-text: 2vw
+    
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Light.otf')
+    font-weight: 100
+
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Medium.otf')
+
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Bold.otf')
+    font-weight: bold
+
+body
+    margin: 0
+    font-family: sf
+    background-color: $bg
+
+div.welcome
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: url("assets/forrest.jpg")
+    background-repeat: no-repeat
+    background-position: center
+
+    .ask
+        margin: 20px 0 0 30px
+
+        .question
+            display: flex
+            align-items: center
+
+            .block
+                height: 25px
+                width: 10px
+                background-color: $green
+            p
+                color: $green
+                font-size: $small-text
+                margin: 0 10px
+                letter-spacing: 0.5px
+
+        p.bio
+            margin: 0
+            font-size: 8vw
+            font-weight: bold
+            color: $dark-green
+            letter-spacing: 1.5px
+
+        p.detail
+            margin: 0
+            font-size: $small-text - 0.25vw
+            color: $dark-green
+            font-weight: 100
+            letter-spacing: 0.5px
+    
+    i
+        font-size: 60px
+        position: absolute
+        bottom: 0
+        right: 0
+        margin: 0 40px 20px 0
+        color: $light-green
+        cursor: pointer
+
+nav
+    margin: 100vh 10vw 0 10vw
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    border-bottom: 1px solid black
+
+    img
+        width: 60px
+
+    ul
+        display: flex
+        text-decoration: none
+        justify-self: end
+        align-items: center
+        font-size: 20px
+
+        input
+            width: 0px
+            transition: all 1s ease-in-out
+            border: 1px $green solid
+            outline: none
+            height: 20px
+            text-indent: 10px
+            font-size: 15px
+
+        & > *
+            margin: 0 10px
+
+        li
+            list-style: none
+
+            a
+                color: $blue-green
+                text-decoration: none
+
+                &:hover
+                    color: $green
+
+div.fact
+
+    p.bio
+        font-size: 40px
+        color: $dark-green
+        display: flex
+        justify-content: center
+        margin: 15px 0
+
+    div.stat
+        background-color: $gray
+        display: flex
+        justify-items: center
+        flex-direction: column
+
+        div
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            align-items: center
+            padding: 20px 12vw
+
+            & > *
+                justify-self: center
+
+            img
+                width: 200px
+                margin: 0 20px
+                opacity: 0
+
+        p
+            font-size: 25px
+            font-weight: 100
+
+            span
+                color: tomato
+                font-weight: bold
+                font-size: 30px
+
+    .graph
+        background-color: $gray
+
+        canvas#bar
+            width: 80vw
+
+        span
+            color: #333333
+            display: flex
+            justify-content: center
+            padding-bottom: 10px
+            margin-bottom: 40px   
+
+.main
+    margin: 0 20vw
+
+    .art
+        color: $dark-gray
+        font-size: 30px
+        letter-spacing: 1px
+        margin: 10px 0
+
+    a
+        color: $dark-gray
+        text-decoration: none
+
+        &:hover
+            color: $green
+
+        p
+          font-size: 18px
+          margin: 5px 0 20px 0
+
+    img.news
+        width: 60vw 
+
+        &:hover
+            width: 61vw    
+
+footer
+    height: 10vh
+    background-color: $dark-green
+    display: flex
+    justify-content: center
+    align-items: center
+
+    div
+        margin: 0 20px
+
+        i
+            font-size: 25px
+            color: $light-green
