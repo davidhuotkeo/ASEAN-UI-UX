@@ -1,0 +1,87 @@
+$light-green: #C8E690
+$bg: rgba(248, 247, 247, 1)
+$dark-green: #0F1E25
+
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Light.otf')
+    font-weight: 100
+
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Medium.otf')
+
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Bold.otf')
+    font-weight: bold
+    
+html, body
+    margin: 0
+    font-family: sf
+
+    nav
+        height: 7vh
+        width: 100%
+        background-color: $bg
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        align-items: center
+        position: fixed
+        transition: all 0.5s ease
+
+        #logo
+            width: 50px
+            margin: 0 20px
+
+        div.right
+            justify-self: end
+
+            a
+                color: $dark-green
+                font-size: 1.5em
+                text-decoration: none
+                margin: 0 10px
+
+    div.article
+
+        img
+            width: 100%
+        
+        .title
+            font-size: 4em
+            font-weight: bold
+
+        p
+            margin: 20px 20vw
+            font-size: 1.5em
+            font-weight: 100
+
+        p.text:first-letter
+            font-family: 'Satisfy', cursive
+            vertical-align: end
+            text-transform: capitalize
+            font-style: bold
+            font-size: 30px
+
+    footer
+        height: 10vh
+        background-color: $dark-green
+        display: flex
+        justify-content: center
+        align-items: center
+
+        div
+            margin: 0 20px
+
+            i
+                font-size: 25px
+                color: $light-green
+
+@media screen and (max-width: 900px)
+    p
+        margin: 20px !important
+
+@media screen and (max-width: 665px)
+    p.title
+        font-size: 2.5em !important

@@ -1,0 +1,113 @@
+@font-face {
+  font-family: sf;
+  src: url("assets/fonts/SFCompactDisplay-Light.otf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: sf;
+  src: url("assets/fonts/SFCompactDisplay-Medium.otf");
+}
+
+@font-face {
+  font-family: sf;
+  src: url("assets/fonts/SFCompactDisplay-Bold.otf");
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0;
+  font-family: sf;
+}
+
+html nav, body nav {
+  height: 7vh;
+  width: 100%;
+  background-color: #f8f7f7;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+html nav #logo, body nav #logo {
+  width: 50px;
+  margin: 0 20px;
+}
+
+html nav div.right, body nav div.right {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+html nav div.right a, body nav div.right a {
+  color: #0F1E25;
+  font-size: 1.5em;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+html div.article img, body div.article img {
+  width: 100%;
+}
+
+html div.article .title, body div.article .title {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+html div.article p, body div.article p {
+  margin: 20px 20vw;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+html div.article p.text:first-letter, body div.article p.text:first-letter {
+  font-family: 'Satisfy', cursive;
+  vertical-align: end;
+  text-transform: capitalize;
+  font-style: bold;
+  font-size: 30px;
+}
+
+html footer, body footer {
+  height: 10vh;
+  background-color: #0F1E25;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html footer div, body footer div {
+  margin: 0 20px;
+}
+
+html footer div i, body footer div i {
+  font-size: 25px;
+  color: #C8E690;
+}
+
+@media screen and (max-width: 900px) {
+  p {
+    margin: 20px !important;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  p.title {
+    font-size: 2.5em !important;
+  }
+}
+/*# sourceMappingURL=ai.css.map */
