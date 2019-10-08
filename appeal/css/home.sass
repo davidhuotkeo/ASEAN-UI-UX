@@ -5,7 +5,7 @@ $dark-green: #0F1E25
 $gray: #DDDDDD
 $bg: #F7F8F8
 $dark-gray: #373737
-$small-text: 2vw
+$small-text: 2em
     
 @font-face
     font-family: sf
@@ -55,14 +55,14 @@ div.welcome
 
         p.bio
             margin: 0
-            font-size: 8vw
+            font-size: 6.5em
             font-weight: bold
             color: $dark-green
             letter-spacing: 1.5px
 
         p.detail
             margin: 0
-            font-size: $small-text - 0.25vw
+            font-size: $small-text - 1em
             color: $dark-green
             font-weight: 100
             letter-spacing: 0.5px
@@ -115,6 +115,7 @@ nav
                     color: $green
 
 div.fact
+    margin: 0 100px
 
     p.bio
         font-size: 40px
@@ -122,6 +123,7 @@ div.fact
         display: flex
         justify-content: center
         margin: 15px 0
+        text-align: center
 
     div.stat
         background-color: $gray
@@ -155,15 +157,16 @@ div.fact
     .graph
         background-color: $gray
 
-        canvas#bar
-            width: 80vw
-
-        span
+        a
             color: #333333
+            text-decoration: none
             display: flex
             justify-content: center
             padding-bottom: 10px
-            margin-bottom: 40px   
+            margin-bottom: 40px 
+
+            &:hover
+                color: $green  
 
 .main
     margin: 0 20vw
@@ -187,9 +190,10 @@ div.fact
 
     img.news
         width: 60vw 
+        transition: all 0.5s ease-in-out
 
         &:hover
-            width: 61vw    
+            transform: scale(1.03)  
 
 footer
     height: 10vh
@@ -203,4 +207,43 @@ footer
 
         i
             font-size: 25px
-            color: $light-green
+            color: $light-green 
+
+@media screen and (max-width: 800px)
+    div.welcome
+        p.bio
+            font-size: 5em !important
+
+    div.fact
+        margin: 0 25px
+
+    div.main
+        margin: 0 25px
+
+        img
+            width: 90vw !important
+
+@media screen and (max-width: 550px)
+    div.welcome
+        div.ask
+            margin: 10px 0 0 10px
+        p.bio
+            font-size: 3em !important
+
+        i
+            margin: 0 10px 10px 0
+
+    div.main
+        margin: 0 20px
+
+    div.fact
+        div.stat
+            div
+                padding: 0
+                p
+                    font-size: 18px
+
+                    span
+                        font-size: 20px
+                img
+                    width: 150px

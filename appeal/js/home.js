@@ -57,7 +57,7 @@ $(function(){
 $(function(){
     var inp = $('input');
     $('.fas.fa-search, input').hover(function () {
-        inp.css('width', '200px');
+        inp.css('width', '100px');
     },
     function () {
         if(!inp.is(':focus')) {
@@ -101,7 +101,7 @@ $(document).ready(function () {
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             if (bottom_of_window > bottom_of_object) {
-                $(this).animate({ 'opacity': '1' }, 1000);
+                $(this).animate({ 'opacity': '1' }, 2000);
             }
         });
     });

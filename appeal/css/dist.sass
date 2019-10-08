@@ -1,5 +1,6 @@
 $light-green: #C8E690
 $bg: rgba(248, 247, 247, 1)
+$dark-gray: #999999
 $dark-green: #0F1E25
 
 @font-face
@@ -44,7 +45,7 @@ html, body
                 margin: 0 10px
 
                 &:hover
-                    color: #DDDDDD
+                    color: $dark-gray
 
     div.article
 
@@ -55,7 +56,7 @@ html, body
             font-size: 4em
             font-weight: bold
 
-        p
+        p, li
             margin: 20px 20vw
             font-size: 1.5em
             font-weight: 100
@@ -82,7 +83,7 @@ html, body
                 color: $light-green
 
 @media screen and (max-width: 900px)
-    p
+    p, li
         margin: 20px !important
 
     div.right
@@ -91,4 +92,4 @@ html, body
 
 @media screen and (max-width: 665px)
     p.title
-        font-size: 2.5em !important
+        font-size: 2em !important
