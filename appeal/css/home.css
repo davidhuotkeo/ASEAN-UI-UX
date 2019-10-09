@@ -113,11 +113,13 @@ nav ul input {
   width: 0px;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  border: 1px #3E7452 solid;
+  border: none;
   outline: none;
   height: 20px;
   text-indent: 10px;
   font-size: 15px;
+  background: #0F1E25;
+  color: #F7F8F8;
 }
 
 nav ul > * {
@@ -135,6 +137,10 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #3E7452;
+}
+
+nav ul i:hover {
+  cursor: pointer;
 }
 
 div.fact {
@@ -306,6 +312,9 @@ footer div i {
   }
   div.main {
     margin: 0 20px;
+  }
+  div.fact p.bio {
+    font-size: 25px;
   }
   div.fact div.stat div {
     padding: 0;

@@ -104,6 +104,10 @@ html div.who, body div.who {
   margin: 20px;
 }
 
+html div.who p:nth-child(2), body div.who p:nth-child(2) {
+  margin: 0;
+}
+
 html div.who p, body div.who p {
   font-size: 3em;
   margin: 20px 0;
@@ -129,11 +133,19 @@ html div.who div.project ul, body div.who div.project ul {
   padding: 0;
 }
 
+html div.who div.project ul a.contact, body div.who div.project ul a.contact {
+  margin: 0 10px;
+}
+
 html div.who div.project ul a, body div.who div.project ul a {
   color: #0F1E25;
   text-decoration: none;
+}
+
+html div.who div.project ul a p, body div.who div.project ul a p {
   margin: 0 10px;
   font-size: 13px;
+  text-align: center;
 }
 
 html div.who div.project ul a:hover, body div.who div.project ul a:hover {
@@ -173,6 +185,15 @@ footer div i {
 }
 
 @media screen and (max-width: 500px) {
+  div.project ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.project ul a.contact, div.project ul p {
+    margin: 5px 0 !important;
+  }
   div.letter {
     -webkit-transform: translate(-50%, -40%) !important;
             transform: translate(-50%, -40%) !important;
@@ -180,6 +201,10 @@ footer div i {
 }
 
 @media screen and (max-width: 900px) {
+  p.title {
+    background-color: #0F1E25;
+    color: white;
+  }
   div.main img {
     -o-object-fit: cover;
        object-fit: cover;

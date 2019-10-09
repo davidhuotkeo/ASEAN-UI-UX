@@ -95,11 +95,13 @@ nav
         input
             width: 0px
             transition: all 1s ease-in-out
-            border: 1px $green solid
+            border: none
             outline: none
             height: 20px
             text-indent: 10px
             font-size: 15px
+            background: $dark-green
+            color: $bg
 
         & > *
             margin: 0 10px
@@ -113,6 +115,9 @@ nav
 
                 &:hover
                     color: $green
+
+        i:hover
+                cursor: pointer
 
 div.fact
     margin: 0 100px
@@ -237,6 +242,9 @@ footer
         margin: 0 20px
 
     div.fact
+        p.bio
+            font-size: 25px
+            
         div.stat
             div
                 padding: 0

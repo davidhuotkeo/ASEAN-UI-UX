@@ -83,6 +83,9 @@ html, body
         justify-content: center
         margin: 20px
 
+        p:nth-child(2)
+            margin: 0
+
         p
             font-size: 3em
             margin: 20px 0
@@ -101,11 +104,17 @@ html, body
                 justify-self: center
                 padding: 0
 
+                a.contact
+                    margin: 0 10px
+
                 a
                     color: $dark-green
                     text-decoration: none
-                    margin: 0 10px
-                    font-size: 13px
+                    
+                    p
+                        margin: 0 10px
+                        font-size: 13px
+                        text-align: center
 
                     &:hover
                         color: $light-green
@@ -133,10 +142,21 @@ footer
             font-size: 3em !important
 
 @media screen and (max-width: 500px)
+    div.project
+        ul
+            flex-direction: column
+
+            a.contact, p
+                margin: 5px 0 !important
+            
     div.letter
         transform: translate(-50%, -40%) !important
 
 @media screen and (max-width: 900px)
+    p.title
+        background-color: $dark-green
+        color: white
+
     div.main
         img
             object-fit: cover
