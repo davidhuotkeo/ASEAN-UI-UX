@@ -1,4 +1,4 @@
-INFORMATION OF THE WEBSITE
+# INFORMATION OF THE WEBSITE
 
 Please use the internet, because all the plugins is linked from the server (cdnjs)
 
