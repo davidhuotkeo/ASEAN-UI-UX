@@ -1,0 +1,192 @@
+@font-face {
+  font-family: sf;
+  src: url("assets/fonts/SFCompactDisplay-Light.otf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: sf;
+  src: url("assets/fonts/SFCompactDisplay-Medium.otf");
+}
+
+@font-face {
+  font-family: sf;
+  src: url("assets/fonts/SFCompactDisplay-Bold.otf");
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0;
+  font-family: sf;
+}
+
+html nav, body nav {
+  height: 7vh;
+  width: 100%;
+  background-color: #f8f7f7;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: fixed;
+  z-index: 99;
+}
+
+html nav #logo, body nav #logo {
+  width: 50px;
+  margin: 0 20px;
+}
+
+html nav div.right, body nav div.right {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+html nav div.right a, body nav div.right a {
+  color: #0F1E25;
+  font-size: 1.5em;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+html nav div.right a:hover, body nav div.right a:hover {
+  color: #999999;
+}
+
+html div.main, body div.main {
+  position: relative;
+}
+
+html div.main img, body div.main img {
+  width: 100%;
+}
+
+html div.main div.letter, body div.main div.letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  color: #f8f7f7;
+  text-align: center;
+  width: 90%;
+}
+
+html div.main div.letter p, body div.main div.letter p {
+  font-size: 1.2em;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+html div.main div.letter p:first-child, body div.main div.letter p:first-child {
+  font-size: 4em;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+html div.main div.letter p:last-child, body div.main div.letter p:last-child {
+  padding: 20px;
+  background-color: #0F1E25;
+}
+
+html div.who, body div.who {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+}
+
+html div.who p, body div.who p {
+  font-size: 3em;
+  margin: 20px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+html div.who p:nth-child(2), body div.who p:nth-child(2) {
+  font-size: 1em;
+}
+
+html div.who div.project, body div.who div.project {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+html div.who div.project ul, body div.who div.project ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  padding: 0;
+}
+
+html div.who div.project ul a, body div.who div.project ul a {
+  color: #0F1E25;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+html div.who div.project ul a:hover, body div.who div.project ul a:hover {
+  color: #C8E690;
+}
+
+footer {
+  height: 10vh;
+  background-color: #0F1E25;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer div {
+  margin: 0 20px;
+}
+
+footer div i {
+  font-size: 25px;
+  color: #C8E690;
+}
+
+@media screen and (max-width: 1080px) {
+  div.letter p {
+    font-size: 1em !important;
+  }
+  div.letter p:first-child {
+    font-size: 3em !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  div.letter {
+    -webkit-transform: translate(-50%, -40%) !important;
+            transform: translate(-50%, -40%) !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  div.main img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 50vh;
+  }
+  div.right a {
+    font-size: 1em !important;
+  }
+}
+/*# sourceMappingURL=about.css.map */

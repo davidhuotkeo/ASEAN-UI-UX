@@ -52,6 +52,7 @@ $(function(){
             }
         }
     });
+    console.log(Bar);
 });
 
 $(function(){

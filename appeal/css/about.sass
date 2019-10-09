@@ -1,0 +1,148 @@
+$light-green: #C8E690
+$bg: rgba(248, 247, 247, 1)
+$dark-gray: #999999
+$dark-green: #0F1E25
+
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Light.otf')
+    font-weight: 100
+
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Medium.otf')
+
+@font-face
+    font-family: sf
+    src: url('assets/fonts/SFCompactDisplay-Bold.otf')
+    font-weight: bold
+
+html, body
+    margin: 0
+    font-family: sf
+
+    nav
+        height: 7vh
+        width: 100%
+        background-color: $bg
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        align-items: center
+        transition: all 0.5s ease
+        position: fixed
+        z-index: 99
+
+        #logo
+            width: 50px
+            margin: 0 20px
+
+        div.right
+            justify-self: end
+
+            a
+                color: $dark-green
+                font-size: 1.5em
+                text-decoration: none
+                margin: 0 10px
+
+                &:hover
+                    color: $dark-gray
+
+    div.main
+        position: relative
+
+        img
+            width: 100%
+
+        div.letter
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -20%)
+            color: $bg
+            text-align: center
+            width: 90%
+
+            p
+                font-size: 1.2em
+                margin: 0
+                letter-spacing: 0.5px
+
+            p:first-child
+                font-size: 4em
+                letter-spacing: 2px
+                font-weight: bold
+                margin-bottom: 10px
+
+            p:last-child
+                padding: 20px
+                background-color: $dark-green
+
+    div.who
+        display: grid
+        justify-content: center
+        margin: 20px
+
+        p
+            font-size: 3em
+            margin: 20px 0
+            font-weight: bold
+            text-align: center
+
+        p:nth-child(2)
+            font-size: 1em
+
+        div.project
+            justify-self: center
+
+            ul
+                list-style: none
+                display: flex
+                justify-self: center
+                padding: 0
+
+                a
+                    color: $dark-green
+                    text-decoration: none
+                    margin: 0 10px
+                    font-size: 13px
+
+                    &:hover
+                        color: $light-green
+
+footer
+    height: 10vh
+    background-color: $dark-green
+    display: flex
+    justify-content: center
+    align-items: center
+
+    div
+        margin: 0 20px
+
+        i
+            font-size: 25px
+            color: $light-green
+
+@media screen and (max-width: 1080px)
+    div.letter
+        p
+            font-size: 1em !important
+
+        p:first-child
+            font-size: 3em !important
+
+@media screen and (max-width: 500px)
+    div.letter
+        transform: translate(-50%, -40%) !important
+
+@media screen and (max-width: 900px)
+    div.main
+        img
+            object-fit: cover
+            height: 50vh
+
+
+    div.right
+        a
+            font-size: 1em !important
